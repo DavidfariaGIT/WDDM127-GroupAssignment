@@ -346,5 +346,52 @@
   font-weight: 400;
 }
 
+.navbar {
+  display: flex;
+  position: absolute;
+  right: 120px;
+  bottom: -2140px;
+  justify-content: space-between;
+  padding: 20px;
+  
+  color: rgb(112, 111, 111);
+}
+
+.nav-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+
+.nav-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+.nav-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-column ul li {
+  margin-bottom: 10px;
+}
+
+
+.nav-column ul li a {
+  color: rgb(149, 149, 149);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-column ul li a:hover {
+  color: #3f3f3f;
+}
+
+
 
   

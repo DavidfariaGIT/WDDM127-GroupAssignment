@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
   
   body {
@@ -153,7 +154,7 @@
     margin-bottom: 20px;
   }
   
-  .text-right p {
+  #ndh {
     font-size: 1.em;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -267,7 +268,7 @@
 
   .footer_container {
     width: 100%;
-    height: 11z00px;
+    height: 11px;
     background-color: whitesmoke;
     
   }

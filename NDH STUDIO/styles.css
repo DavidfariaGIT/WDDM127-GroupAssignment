@@ -283,7 +283,7 @@
     
   }
 
-  .footer_text {
+  #footer_text {
     position: absolute;
     left: 330px;
     bottom: -1750px;
@@ -311,7 +311,7 @@
   display: flex;
  }
 
- .news {
+ #news {
   margin-left: 250px;
   margin-top: 70px;
   font-family: Arial, Helvetica;

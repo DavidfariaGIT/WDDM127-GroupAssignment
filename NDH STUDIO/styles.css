@@ -290,7 +290,7 @@
     color:#696868
   }
 
-  .footer_link {
+  #footer_link {
     font-size: 1.2rem;
     position: absolute;
     left: 330px;
@@ -327,7 +327,7 @@
   color: #929292;
 }
 
-.email {
+#email {
   margin-left: 250px;
   padding-top: 50px;
   color: #929292;
@@ -340,7 +340,7 @@
 
 }
 
-.subscribe {
+#subscribe {
   margin-left: 250px;
   padding-top: 20px;
   text-decoration: underline;

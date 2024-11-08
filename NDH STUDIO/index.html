@@ -28,8 +28,8 @@
         <img src="Images/nathan-van-egmond-0IwypLLbHiA-unsplash 1.png" alt="Room design 1">
         <img src="Images/kam-idris-_HqHX3LBN18-unsplash 1.png" alt="Room design 2">
         <div class="arrow-navigation">
-            <img src="Images/Left.png" alt="Previous" class="arrow">
-            <img src="Images/Right.png" alt="Next" class="arrow">
+            <img class="arrow" src="Images/Left.png" alt="Previous" class="arrow">
+            <img class="arrow" src="Images/Right.png" alt="Next" class="arrow">
         </div>
     </div>
       </div>
@@ -66,7 +66,7 @@
 <section class="signature-creations">
     <h2 class="section-title">Signature Creations</h2>
     <div class="creation">
-      <img src="Images/Oceanic.png" alt="Oceanic Elegance">
+      <img class="scalable" src="Images/Oceanic.png" alt="Oceanic Elegance">
       <div class="creation-description">
         <h3>Oceanic Elegance</h3>
         <p id="embrace"></p>
@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="creation">
-      <img src="Images/Urban.png" alt="Urban Sophistication">
+      <img class="scalable" src="Images/Urban.png" alt="Urban Sophistication">
       <div class="creation-description">
         <h3>Urban Sophistication</h3>
         <p id="modern"></p>
@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="creation">
-      <img src="Images/Rustic.png" alt="Rustic Revival">
+      <img class="scalable" src="Images/Rustic.png" alt="Rustic Revival">
       <div class="creation-description">
         <h3>Rustic Revival</h3>
         <p id="charm"></p>
@@ -90,13 +90,13 @@
       </div>
     </div>
   </section>
-<!--Footer-->
+<!--Footer by faria-->
  <footer>
   <div class="footer_container">
     <h1 class="footer_header">Ready to redefine <br> your space?</h1>
       <img class="footer_image" src="Images/footerimage.png" alt="chair and wheat"></img>
       <p id="footer_text"></p>
-      <a><h2 id="footer_link"></h2></a>
+      <h2 id="footer_link"></h2>
   <div class="bottom_container">
     <div class="bottom_left">
      <h2 id="news"></h2>
@@ -104,7 +104,7 @@
      <p id="email"></p>
      <hr>
      <h2 id="subscribe">sub button</h2>
-
+      <!--navbar list-->
      <nav class="navbar">
       <div class="nav-column">
           <h3 id="quick"></h3>
@@ -125,10 +125,10 @@
               <li><a href="#">Cookie Policy</a></li>
           </ul>
       </div>
-
       <div class="nav-column">
           <h3 id="contact"></h3>
           <ul>
+            <!--Contact info-->
               <li>+1234 4567 890</li>
               <li><a href="mailto:info@ndh.com">info@ndh.com</a></li>
               <li>123 Anywhere St., Any City, 12345 Any State</li>
@@ -139,6 +139,8 @@
   </div>
  </footer>
 
+
+ <!--JavaScript by Faria-->
  <script>
 
 document.getElementById('bot_p').innerText = "stay inspired. Get the latest design insights straight to your inbox";
@@ -156,6 +158,101 @@ document.getElementById('info').innerText = "information";
 document.getElementById('contact').innerText = "Contact";
 document.getElementById('quick').innerText = "Quick Links";
 document.getElementById('info').innerText = "information";
+
+//makes the images scalable when hovered//
+const images = document.querySelectorAll('.scalable');
+
+
+images.forEach(image => {
+   
+    image.addEventListener('mouseenter', () => {
+        image.style.transform = 'scale(1.1)'; 
+    });
+
+   
+    image.addEventListener('mouseleave', () => {
+        image.style.transform = 'scale(1)'; 
+    });
+});
+
+//make the arrows rotate when clicked//
+const arrows = document.querySelectorAll('.arrow');
+
+
+arrows.forEach(arrow => {
+    arrow.addEventListener('click', () => {
+        
+        if (arrow.style.transform === 'rotate(180deg)') {
+            arrow.style.transform = 'rotate(0deg)';
+        } else {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+
+        
+        arrow.classList.toggle('clicked');
+    });
+});
+
+
+//makes the link scale and change color when clicked//
+const link = document.getElementById('footer_link');
+
+
+link.addEventListener('click', function(event) {
+    
+    event.preventDefault();
+
+   
+    link.classList.toggle('clicked');
+});
+
+//this is gonna make the subscribe button have a bounce animation as well as having a color for hover and loading and then for subscribed//
+const subscribeButton = document.getElementById('subscribe');
+
+
+subscribeButton.addEventListener('click', function() {
+
+    subscribeButton.classList.add('loading');
+    subscribeButton.disabled = true; 
+
+    
+    setTimeout(() => {
+        
+        subscribeButton.classList.remove('loading');
+        subscribeButton.classList.add('clicked', 'bounce');
+        subscribeButton.textContent = 'Subscribed'; 
+        subscribeButton.disabled = false; 
+    }, 2000); 
+});
+
+// Get all nav links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Add event listeners for hover
+navLinks.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    link.classList.add('float'); // Add float class on hover
+  });
+
+  link.addEventListener('mouseleave', () => {
+    link.classList.remove('float'); // Remove float class when mouse leaves
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             
